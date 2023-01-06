@@ -9,3 +9,12 @@ numpy==1.23.4<br>
 ```
 pip3 install torch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
 ```
+## Train and Test the model
+### Optional arguments
+
+### Example
+
+## Use DeepAlgPro to predict allergens
+### Optional arguments
+
+### Example
