@@ -11,9 +11,13 @@ Allergies have become an emerging public health problem worldwide.It is critical
 - Bio<br>
 - argparse<br>
 - pandas<br>
+## Installation
+1. Download DeepAlgPro
 ```
-pip3 install torch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
+git clone https://github.com/chun-he-316/DeepAlgPro.git
 ```
+2. Install required packages
+You can 
 ## Train and Test the model
 ```
 usage: main.py [-h] [-i INPUTS] [--epochs N] [--lr LR] [-b N] [--mode {train,test}]
