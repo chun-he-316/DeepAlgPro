@@ -2,7 +2,14 @@
 ## Introduction
 Allergies have become an emerging public health problem worldwide.It is critical to evaluate potential allergens, especially today when the number of modified proteins in food, therapeutic drugs, and biopharmaceuticals is increasing rapidly. Here, we proposed a software, called DeepAlgPro, that combined a convolutional neural network (CNN) with Multi-Headed Self-Attention (MHSA) and was suitable for large-scale prediction of allergens. 
 
-## Dependency
+
+## Installation
+1. Download DeepAlgPro
+```
+git clone https://github.com/chun-he-316/DeepAlgPro.git
+```
+2. Install required packages<br>
+ Dependency
 - python 3.9<br>
 - pytorch==1.12.1+cu116<br>
 - sklearn<br>
@@ -11,16 +18,8 @@ Allergies have become an emerging public health problem worldwide.It is critical
 - Bio<br>
 - argparse<br>
 - pandas<br>
-## Installation
-1. Download DeepAlgPro
 ```
-git clone https://github.com/chun-he-316/DeepAlgPro.git
-```
-2. Install required packages<br>
-You can choose to download the above dependencies separately, or use the following command to build the DeepAlgPro environment and download all the dependencies at the same time. If you use the latter, please modify the prefix in environment.yaml to be the correct path of the environment you intend to create.
-```
-conda env create -f environment.yaml
-conda avtivate DeepAlgPro
+pip3 install torch==1.12.1 torchvision==0.9.2 torchaudio===0.8.2 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install -r requirements.txt
 ```
 ## Train and Test the model
