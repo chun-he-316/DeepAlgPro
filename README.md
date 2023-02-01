@@ -19,7 +19,7 @@ git clone https://github.com/chun-he-316/DeepAlgPro.git
 - argparse<br>
 - pandas<br>
 ```
-pip3 install torch==1.12.1 torchvision==0.9.2 torchaudio===0.8.2 --extra-index-url https://download.pytorch.org/whl/cu116
+pip3 install torch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install -r requirements.txt
 ```
 ## Train and Test the model
