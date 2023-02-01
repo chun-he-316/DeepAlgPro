@@ -11,13 +11,11 @@ git clone https://github.com/chun-he-316/DeepAlgPro.git
 2. Install required packages<br>
  Dependency
 - python 3.9<br>
-- pytorch==1.12.1+cu116<br>
-- sklearn<br>
-- torchmetrics<br>
-- numpy<br>
-- Bio<br>
-- argparse<br>
-- pandas<br>
+- Bio==1.5.3
+- numpy==1.23.4
+- pandas==1.5.0
+- scikit_learn==1.2.1
+- torchmetrics==0.9.3
 ```
 pip3 install torch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install -r requirements.txt
