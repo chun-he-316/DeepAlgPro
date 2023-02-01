@@ -16,8 +16,13 @@ Allergies have become an emerging public health problem worldwide.It is critical
 ```
 git clone https://github.com/chun-he-316/DeepAlgPro.git
 ```
-2. Install required packages
-You can 
+2. Install required packages<br>
+You can choose to download the above dependencies separately, or use the following command to build the DeepAlgPro environment and download all the dependencies at the same time. If you use the latter, please modify the prefix in environment.yaml to be the correct path of the environment you intend to create.
+```
+conda env create -f environment.yaml
+conda avtivate DeepAlgPro
+pip install -r requirements.txt
+```
 ## Train and Test the model
 ```
 usage: main.py [-h] [-i INPUTS] [--epochs N] [--lr LR] [-b N] [--mode {train,test}]
