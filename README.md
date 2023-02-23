@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ```
 ## Train and Test the model
 ```
-usage: main.py [-h] [-i INPUTS] [--epochs N] [--lr LR] [-b N] [--mode {train,test}]
+usage: python main.py [-h] [-i INPUTS] [--epochs N] [--lr LR] [-b N] [--mode {train,test}]
 ```
 ### Optional arguments
 ```
@@ -40,7 +40,7 @@ python main.py -i data/all.train.fasta --epochs 120 --lr 0.0001 -b 72 --mode tra
 ```
 ## Use DeepAlgPro to predict allergens
 ```
-usage: predict.py [-h] [-i INPUTS] [-b N] [-o OUTPUT]
+usage: python predict.py [-h] [-i INPUTS] [-b N] [-o OUTPUT]
 ```
 ### Optional arguments
 ```
