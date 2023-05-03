@@ -92,7 +92,7 @@ def predict(args):
                     [''.join(inputs_id), probability, 'non-allergenicity'])
     # 结果文件生成
     df = pd.DataFrame(pred_r, columns=['protein', 'scores', 'predict result'])
-    df.to_csv(args.output, sep='\t', header=True, index=True)
+    df.to_csv(args.output, sep='\t', header=True, index=False)
 
 
 if __name__ == '__main__':
