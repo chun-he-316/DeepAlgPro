@@ -61,3 +61,9 @@ usage: python predict.py [-h] [-i INPUTS] [-b N] [-o OUTPUT]
 ```
 python predict.py -i data/all.test.fasta -o allergen.predict.txt
 ```
+#### Output files
+
+- train.log file —— Record loss values for each batch
+- .everyepoch.valid.txt files —— Record the validation results after each training epoch
+- .pt file —— The model obtained by training
+- valid.log —— Results of 10-fold cross-validation
