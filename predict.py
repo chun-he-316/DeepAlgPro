@@ -17,7 +17,7 @@ def main():
     argparser.add_argument('-b', '--batch-size', default=1, type=int,
                            metavar='N')
     argparser.add_argument(
-        '-o', '--output', default='new.allergenic_predict.txt', type=str, help='output file')
+        '-o', '--output', default='allergenic_predict.txt', type=str, help='output file')
 
     args = argparser.parse_args()
     os.environ['MASTER_ADDR'] = '127.0.0.1'
