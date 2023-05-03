@@ -10,11 +10,11 @@ This model was trained on NVIDIA GeForce RTX 3090. When using it, it is supporte
 - Packages requirement<br>
   - python 3.9<br>
   - Bio==1.5.3<br>
-    numpy==1.23.4<br>
-    pandas==1.5.0<br>
-    scikit_learn==1.2.1<br>
-    torch==1.12.1+cu116<br>
-    torchmetrics==0.9.3<br>
+  - numpy==1.23.4<br>
+  - pandas==1.5.0<br>
+  - scikit_learn==1.2.1<br>
+  - torch==1.12.1+cu116<br>
+  - torchmetrics==0.9.3<br>
 ## Installation
 1. Download DeepAlgPro
 ```
