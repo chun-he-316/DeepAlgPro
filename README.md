@@ -2,7 +2,7 @@
 ## Introduction
 Allergies have become an emerging public health problem worldwide.It is critical to evaluate potential allergens, especially today when the number of modified proteins in food, therapeutic drugs, and biopharmaceuticals is increasing rapidly. Here, we proposed a software, called DeepAlgPro, that combined a convolutional neural network (CNN) with Multi-Headed Self-Attention (MHSA) and was suitable for large-scale prediction of allergens. 
 
-## Platform requirements
+## Requirements
 
 
 ## Installation
@@ -28,11 +28,10 @@ usage: python main.py [-h] [-i INPUTS] [--epochs N] [--lr LR] [-b N] [--mode {tr
 ```
 #### Optional arguments
 ```
-  -h, --help            show this help message and exit
+  -h, --help                     show this help message and exit
   -i INPUTS, --inputs INPUTS
-  --epochs N            number of total epochs to run
-  --lr LR, --learning-rate LR
-                        learning rate
+  --epochs N                     number of total epochs to run
+  --lr LR, --learning-rate LR    learning rate
   -b N, --batch-size N
   --mode {train,test}
 ```
@@ -52,12 +51,10 @@ usage: python predict.py [-h] [-i INPUTS] [-b N] [-o OUTPUT]
 ```
 #### Optional arguments
 ```
-  -h, --help            show this help message and exit
-  -i INPUTS, --inputs INPUTS
-                        input file
+  -h, --help                    show this help message and exit
+  -i INPUTS, --inputs INPUTS    input file
   -b N, --batch-size N
-  -o OUTPUT, --output OUTPUT
-                        output file
+  -o OUTPUT, --output OUTPUT    output file
 ```
 #### Input files
 The input file specified by -i is a protein sequence file; each sequence has a unique id and starts with >. The input protein sequence number must be divisible by the batch size.
@@ -71,7 +68,6 @@ python predict.py -i data/all.test.fasta -o allergen.predict.txt
         protein scores  predict result
 protein_1   0.9983819723129272      allergenicity
 protein_2   0.999177873134613       allergenicity
-protein_3   0.000125454544823      non-allergenicity
+protein_3   0.000125454544823       non-allergenicity
 protein_4   0.9991099238395691      allergenicity
-
 ```
