@@ -3,18 +3,18 @@
 Allergies have become an emerging public health problem worldwide.It is critical to evaluate potential allergens, especially today when the number of modified proteins in food, therapeutic drugs, and biopharmaceuticals is increasing rapidly. Here, we proposed a software, called DeepAlgPro, that combined a convolutional neural network (CNN) with Multi-Headed Self-Attention (MHSA) and was suitable for large-scale prediction of allergens. 
 
 ## Requirements
-- Platform requirement
+- Platform requirement<br>
 We trained the model under linux OS, but it can also be run under windows, mac OS. Your operating system must be supported by the deep learning framework and related libraries you used to use this model. Because our model was implemented in Pytorch 1.12.1, you must check its OS compatibility list [here](https://pytorch.org/get-started/previous-versions/) to ensure that your OS (e.g., Ubuntu, Windows, macOS) is supported.
-- Device requirement
+- Device requirement<br>
 This model was trained on NVIDIA GeForce RTX 3090. When using it, it is supported to run under both GPU and CPU. When the GPU is not available(`torch.cuda.is_available()=False`), the model will run using the CPU.
-- Packages requirement
+- Packages requirement<br>
     python 3.9<br>
-    Bio==1.5.3
-    numpy==1.23.4
-    pandas==1.5.0
-    scikit_learn==1.2.1
-    torch==1.12.1+cu116
-    torchmetrics==0.9.3
+    Bio==1.5.3<br>
+    numpy==1.23.4<br>
+    pandas==1.5.0<br>
+    scikit_learn==1.2.1<br>
+    torch==1.12.1+cu116<br>
+    torchmetrics==0.9.3<br>
 ## Installation
 1. Download DeepAlgPro
 ```
