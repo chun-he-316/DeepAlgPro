@@ -2,6 +2,8 @@
 ## Introduction
 Allergies have become an emerging public health problem worldwide.It is critical to evaluate potential allergens, especially today when the number of modified proteins in food, therapeutic drugs, and biopharmaceuticals is increasing rapidly. Here, we proposed a software, called DeepAlgPro, that combined a convolutional neural network (CNN) with Multi-Headed Self-Attention (MHSA) and was suitable for large-scale prediction of allergens. 
 
+## Platform requirements
+
 
 ## Installation
 1. Download DeepAlgPro
@@ -57,13 +59,12 @@ usage: python predict.py [-h] [-i INPUTS] [-b N] [-o OUTPUT]
   -o OUTPUT, --output OUTPUT
                         output file
 ```
+#### Input files
+The input file specified by -i is a protein sequence file; each sequence has a unique id and starts with >. The input protein sequence number must be divisible by the batch size.
 #### Example
 ```
 python predict.py -i data/all.test.fasta -o allergen.predict.txt
 ```
 #### Output files
+  The default result file is `allergenic_predict.txt`, a file with tabs as spacers. You can also specify the output file with `-o`. The first column in the output file is the id of the input protein, the second column is the score between 0 and 1 predicted by the model, and the third column value is the predicted result, allergenicity or non-allergenicity.
 
-- train.log file —— Record loss values for each batch
-- .everyepoch.valid.txt files —— Record the validation results after each training epoch
-- .pt file —— The model obtained by training
-- valid.log —— Results of 10-fold cross-validation
