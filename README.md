@@ -66,5 +66,12 @@ The input file specified by -i is a protein sequence file; each sequence has a u
 python predict.py -i data/all.test.fasta -o allergen.predict.txt
 ```
 #### Output files
-  The default result file is `allergenic_predict.txt`, a file with tabs as spacers. You can also specify the output file with `-o`. The first column in the output file is the id of the input protein, the second column is the score between 0 and 1 predicted by the model, and the third column value is the predicted result, allergenicity or non-allergenicity.
+  The default result file is `allergenic_predict.txt`, a file with tabs as spacers. You can also specify the output file with `-o`. The first column in the output file is the id of the input protein, the second column is the score between 0 and 1 predicted by the model, and the third column value is the predicted result, allergenicity or non-allergenicity.For example,
+```
+        protein scores  predict result
+protein_1   0.9983819723129272      allergenicity
+protein_2   0.999177873134613       allergenicity
+protein_3   0.000125454544823      non-allergenicity
+protein_4   0.9991099238395691      allergenicity
 
+```
