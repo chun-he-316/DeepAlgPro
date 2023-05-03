@@ -26,7 +26,7 @@ def main():
 
 if torch.cuda.is_available():
     device = torch.device("cuda")
-    print(torch.cuda.get_device_name())
+    print("We will use "+torch.cuda.get_device_name())
 else:
     device = torch.device('cpu')
 
@@ -76,14 +76,21 @@ def predict(args):
     # 加载模型
     model = convATTnet()
     model.to(device)
-    model.load_state_dict(torch.load('model.pt'), strict=True)
+    if torch.cuda.is_available():
+        model.load_state_dict(torch.load('model.pt'), strict=True)
+    else:
+        model.load_state_dict(torch.load('model.pt', map_location=torch.device('cpu')),
+                              strict=True)
     with torch.no_grad():
         pred_r = []
         for i, data in enumerate(data_loader, 0):
             inputs, inputs_id = data
             inputs = inputs.to(device)
             outputs = model(inputs)
-            probability = outputs.item()
+            if device == torch.device('cpu'):
+                probability = outputs[0].item()
+            else:
+                probability = outputs.item()
             if probability > 0.5:
                 pred_r.append(
                     [''.join(inputs_id), probability, 'allergenicity'])
@@ -92,7 +99,7 @@ def predict(args):
                     [''.join(inputs_id), probability, 'non-allergenicity'])
     # 结果文件生成
     df = pd.DataFrame(pred_r, columns=['protein', 'scores', 'predict result'])
-    df.to_csv(args.output, sep='\t', header=True, index=False)
+    df.to_csv(args.output, sep='\t', header=True, index=True)
 
 
 if __name__ == '__main__':
