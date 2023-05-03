@@ -8,8 +8,8 @@ We trained the model under linux OS, but it can also be run under windows, mac O
 - Device requirement<br>
 This model was trained on NVIDIA GeForce RTX 3090. When using it, it is supported to run under both GPU and CPU. When the GPU is not available(`torch.cuda.is_available()=False`), the model will run using the CPU.
 - Packages requirement<br>
-    python 3.9<br>
-    Bio==1.5.3<br>
+  - python 3.9<br>
+  - Bio==1.5.3<br>
     numpy==1.23.4<br>
     pandas==1.5.0<br>
     scikit_learn==1.2.1<br>
