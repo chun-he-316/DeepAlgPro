@@ -44,10 +44,10 @@ python main.py -i data/all.train.fasta --epochs 120 --lr 0.0001 -b 72 --mode tra
 ```
 #### Output files
 The training process generates a number of files. The types of files are listed below.
-- train.log file —— Record loss values for each batch
-- .everyepoch.valid.txt files —— Record the validation results after each training epoch
-- .pt file —— The model obtained by training
-- valid.log —— Results of 10-fold cross-validation
+- train.log file: Record loss values for each batch.
+- .everyepoch.valid.txt files: Record the validation results after each training epoch.
+- .pt file: The model obtained by training.
+- valid.log: Results of 10-fold cross-validation.
 ## Use DeepAlgPro to predict allergens
 ```
 usage: python predict.py [-h] [-i INPUTS] [-b N] [-o OUTPUT]
