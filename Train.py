@@ -34,7 +34,7 @@ else:
     print('No GPU available, using the CPU instead.')
     device = torch.device("cpu")
 
-
+# Dictionary of Amino Acids and Numbers.
 codeadict = {'A': "1", 'C': "2", 'D': "3", 'E': "4", 'F': "5", 'G': "6", 'H': "7", 'I': "8", 'K': "9", 'L': "10",
              'M': "11", 'N': "12", 'P': "13", 'Q': "14", 'R': "15", 'S': "16", 'T': "17", 'V': "18", 'W': "19", 'Y': "20"}
 
@@ -122,7 +122,7 @@ def train(args):
         train_ids = TensorDataset(x_train, y_train_label)
         train_loader = DataLoader(
             dataset=train_ids, batch_size=args.batch_size, shuffle=True, drop_last=True)
-
+        
         model.train()
         best_f1 = 0
         for epoch in range(args.epochs):
@@ -143,13 +143,16 @@ def train(args):
                 now = time.asctime(time.localtime(time.time()))
             valid_loss, accuracy_value, recall_value, precision_value, auroc_value, f1_value = validation(
                 model, x_valid, y_valid_label, criterion, args)
+            # Generate validation results for each epoch.
             log('%d\t%.6f\t%.6f\t%.6f\t%.6f\t%.6f\t%.6f' % (epoch, valid_loss, accuracy_value, recall_value,
                 precision_value, auroc_value, f1_value), './model.'+str(k)+'.fold.everyepoch.valid.txt')
+            # Save the model with the largest F1 value.
             if f1_value > best_f1:
                 best_f1 = f1_value
                 torch.save(model.state_dict(), './model.'+str(k)+'.pt')
                 valid_loss, accuracy_value, recall_value, precision_value, auroc_value, f1_value = validation(
                     model, x_valid, y_valid_label, criterion, args)
+        # Generate validation results for each fold
         log('[k: %d] valid_loss: %.3f accuracy_value: %.6f recall_value: %.6f precision_value: %.6f auroc_value: %.6f f1_value: %.6f' % (
             k, valid_loss, accuracy_value, recall_value, precision_value, auroc_value, f1_value), 'valid.log')
         valid_loss_sum += valid_loss
