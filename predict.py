@@ -73,7 +73,7 @@ def predict(args):
     data_loader = DataLoader(
         dataset=data_ids, batch_size=args.batch_size, shuffle=False)
 
-    # 加载模型
+    # load the model
     model = convATTnet()
     model.to(device)
     if torch.cuda.is_available():
@@ -97,7 +97,7 @@ def predict(args):
             else:
                 pred_r.append(
                     [''.join(inputs_id), probability, 'non-allergenicity'])
-    # 结果文件生成
+    # generate outfile file
     df = pd.DataFrame(pred_r, columns=['protein', 'scores', 'predict result'])
     df.to_csv(args.output, sep='\t', header=True, index=True)
 
