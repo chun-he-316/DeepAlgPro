@@ -74,3 +74,5 @@ protein_2   0.999177873134613       allergenicity
 protein_3   0.000125454544823       non-allergenicity
 protein_4   0.9991099238395691      allergenicity
 ```
+## Citation
+He C, Ye X, Yang Y, Hu L, Si Y, Zhao X, Chen L, Fang Q, Wei Y, Wu F, Ye G. DeepAlgPro: an interpretable deep neural network model for predicting allergenic proteins. Brief Bioinform. 2023 Jul 20;24(4):bbad246. doi: 10.1093/bib/bbad246.
